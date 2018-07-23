@@ -7,10 +7,10 @@ class QuestionsDisplay extends Component {
       <div>
         {this.props.QuestionsMain.map((each) => {
           return(
-            <div>
+            <div className="marginBorder">
             <p className="question" >Problem {each.questionNumber}:</p>
             <p>question:{each.question}</p>
-            <p>Answer:{each.answer}</p>
+            <p className="background" >Answer:{each.answer}</p>
         </div>
           )
         })

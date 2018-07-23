@@ -19,7 +19,7 @@ class Main extends Component {
         <img className="pic1" src={require('./Screen Shot 2018-07-21 at 8.26.20 PM.png')} alt="starting" />
         <QuestionsDisplay QuestionsMain={this.state.QuestionsMain} />
         <NavLink to='/AnswersAndMore'>
-          <input type="submit" value="Answers and More" />
+          <input className="button" type="submit" value="Answers and More" />
         </NavLink>
         <img className="pic2" src={require('./chegg down pic.png')} alt="ending" />
       </div>
