@@ -4,8 +4,8 @@ class CheggStudyPractice extends Component {
   render() {
     return (
       <div>
-        <img className="pic2" src={require("./cheggStudyPractice.png")} alt="studypic" />
-        <h1>CheggStudyPractice</h1>
+        <img className="pic2" src={require("./studyPracUp.png")} alt="studypic" />
+        <img className="pic2" src={require("./studyPracdown.png")} alt="studydown" />
       </div>
     );
   }
