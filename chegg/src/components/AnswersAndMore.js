@@ -6,7 +6,16 @@ class AnswersAndMore extends Component {
     console.log(this.props.QuestionsAll);
     return (
       <div>
-        <h1>Answers and More</h1>
+         {this.props.QuestionsAll.map((each) => {
+          return(
+            <div>
+            <p>Problem {each.questionNumber}:</p>
+            <p>{each.question}</p>
+            <p>{each.answer}</p>
+        </div>
+          )
+        })
+        }
         <NavLink to='CheggStudyPractice'>
           <input type="submit" value="CheggStudyPractice" />
       </NavLink>

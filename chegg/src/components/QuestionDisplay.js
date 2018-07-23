@@ -5,8 +5,16 @@ class QuestionsDisplay extends Component {
     console.log(this.props.QuestionsMain);
     return (
       <div>
-        <h1>hi</h1>
-
+        {this.props.QuestionsMain.map((each) => {
+          return(
+            <div>
+            <p>Problem {each.questionNumber}:</p>
+            <p>{each.question}</p>
+            <p>{each.answer}</p>
+        </div>
+          )
+        })
+        }
       </div>
     );
   }
