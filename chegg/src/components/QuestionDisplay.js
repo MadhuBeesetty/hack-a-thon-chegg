@@ -8,9 +8,9 @@ class QuestionsDisplay extends Component {
         {this.props.QuestionsMain.map((each) => {
           return(
             <div>
-            <p>Problem {each.questionNumber}:</p>
-            <p>{each.question}</p>
-            <p>{each.answer}</p>
+            <p className="question" >Problem {each.questionNumber}:</p>
+            <p>question:{each.question}</p>
+            <p>Answer:{each.answer}</p>
         </div>
           )
         })

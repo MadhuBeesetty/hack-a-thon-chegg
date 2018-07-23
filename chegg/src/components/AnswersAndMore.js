@@ -9,9 +9,9 @@ class AnswersAndMore extends Component {
          {this.props.QuestionsAll.map((each) => {
           return(
             <div>
-            <p>Problem {each.questionNumber}:</p>
-            <p>{each.question}</p>
-            <p>{each.answer}</p>
+            <p className="question" >Problem {each.questionNumber}:</p>
+            <p>question:{each.question}</p>
+            <p>answer:{each.answer}</p>
         </div>
           )
         })
