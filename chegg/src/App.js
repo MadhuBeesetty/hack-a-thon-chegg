@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Router, NavLink, Route } from 'react-router-dom';
 
-import QuestionsDisplay from './components/QuestionDisplay';
+import Main from './components/Main';
 import CheggStudyPractice from './components/CheggStudyPractice';
 import AnswersAndMore from './components/AnswersAndMore';
 
@@ -11,10 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state={
-      QuestionsMain: [ { questionNumber: 0, question: 'madhu', answer: 'answer1' },
-        { questionNumber: 1, question: 'sudhan', answer: 'answer2' },
-        { questionNumber: 2, question: 'beesetty', answer: 'answer3' } ],
-      questionaAll: [ { questionNumber: 0, question: 'madhu', answer: 'answer1' },
+      questionsAll: [ { questionNumber: 0, question: 'madhu', answer: 'answer1' },
         { questionNumber: 1, question: 'sudhan', answer: 'answer2' },
         { questionNumber: 2, question: 'beesetty', answer: 'answer3' },
         { questionNumber: 3, question: 'extraQuestion', answer: 'answer4' },
@@ -25,12 +22,21 @@ class App extends Component {
   render() {
     return (
       <div>
-        <img className="pic1" src={require('./Screen Shot 2018-07-21 at 8.26.20 PM.png')} alt="starting" />
-        <QuestionsDisplay QuestionsMain={this.state.QuestionsMain} />
-        <input type="submit" value="Answers & More" />
-        <CheggStudyPractice />
-        <AnswersAndMore questionaAll={this.state.questionaAll} />
-        <img className="pic2" src={require('./chegg down pic.png')} alt="ending" />
+        <BrowserRouter>
+          <switch>
+            <Route path='/'
+              render= {() => <Main />}
+              exact />
+            <Route path='/AnswersAndMore'
+              render = { () => <AnswersAndMore 
+              QuestionsAll={this.state.questionsAll}
+                  />}
+              exact />
+        <Route path='/CheggStudyPractice'
+          render = { () => <CheggStudyPractice />}
+          exact />
+    </switch>
+      </BrowserRouter>
       </div>
     );
   }
