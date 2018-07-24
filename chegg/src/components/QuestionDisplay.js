@@ -1,16 +1,36 @@
 import React, { Component } from 'react';
 
 class QuestionsDisplay extends Component {
+  constructor(){
+    super();
+    this.state={
+    isShown:false,
+    }
+  }
+
+  check = () => {
+    const {isShown} = this.state;
+    this.setState({
+    isShown: !isShown
+    })
+  };
+
+  answerFun = (each) => {
+    if(this.state.isShown === true){
+    <p className="background" >Answer:{each.answer}</p>
+    }else{null}
+ }
+
   render() {
     console.log(this.props.QuestionsMain);
     return (
       <div>
-        {this.props.QuestionsMain.map((each) => {
+        {this.props.QuestionsMain.map((each,index) => {
           return(
-            <div className="marginBorder">
+            <div className="marginBorder" key={index} >
             <p className="question" >Problem {each.questionNumber}:</p>
-            <p>question:{each.question}</p>
-            <p className="background" >Answer:{each.answer}</p>
+            <p onClick={this.check}>question:{each.question}</p>
+            {this.answerFun(each)}
         </div>
           )
         })
