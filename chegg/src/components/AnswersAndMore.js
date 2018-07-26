@@ -13,16 +13,6 @@ class AnswersAndMore extends Component {
             <input className="button" type="submit" value="signIn" />
           </div>
         <img className="pic4" src={require('./AnswersTop.png')} alt="answertop" />
-        {/*
-        <div className="dropdown">
-          <button className="dropbtn">Thomas'Calculus(14th Ed.)</button>
-          <div className="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-      </div>
-       */}
       <div>
         {this.props.QuestionsAll.map((each, index) => {
           return(

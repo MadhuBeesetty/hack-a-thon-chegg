@@ -9,10 +9,7 @@ class QuestionsDisplay extends Component {
           return(
             <div className="marginBorder" key={index} >
               <p className="question" >Problem {each.questionNumber}:</p>
-              <details>
-                <summary className="answer" >question:{each.question}</summary>
-                <p className="background" >Answer:{each.answer}</p>
-              </details>
+                <p className="answer" >{each.question}</p>
             </div>
           )
         })
