@@ -9,7 +9,7 @@ class QuestionsDisplay extends Component {
           return(
             <div className="marginBorder" key={index} >
               <p className="question" >Problem {each.questionNumber}:</p>
-                <p className="answer" >{each.question}</p>
+              <p className="answer" >{each.question}</p>
             </div>
           )
         })
