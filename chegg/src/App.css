@@ -1,10 +1,20 @@
 .pic1 {
   width: 1450px;
-  height: 400px;
+  height: 950px;
 }
 
 .pic2 {
   width: 1500px;
+}
+
+.pic4 {
+  width: 1450px;
+  height: 550px;
+}
+
+.pic3 {
+  width: 1450px;
+  height: 180px;
 }
 
 .answer {
@@ -36,6 +46,7 @@
   margin: 40px 2px 20px 350px;
   cursor: pointer;
   width:250px;
+  margin-left:1000px;
 }
 
 .background {
@@ -46,8 +57,8 @@
 
 .marginBorder {
   border: 1px groove;
-  margin-right: 220px;
-  margin-left: 230px;
+  margin-right: 290px;
+  margin-left: 290px;
   margin-bottom:10px;
 }
 

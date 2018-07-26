@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 class AnswersAndMore extends Component {
-  render() {
+  getImage(idx) {
+    return <img className="pic2" src={require(`./Answers/${idx}.png`)} alt={`ans${idx}`} />
+  }
 
+  render() {
     return (
       <div>
-        <img className="pic1" src={require('./AnswersTop.png')} alt="answertop" />
+        <div>
+            <input className="button" type="submit" value="signIn" />
+          </div>
+        <img className="pic4" src={require('./AnswersTop.png')} alt="answertop" />
+        {/*
         <div className="dropdown">
           <button className="dropbtn">Thomas'Calculus(14th Ed.)</button>
           <div className="dropdown-content">
@@ -15,6 +22,7 @@ class AnswersAndMore extends Component {
             <a href="#">Link 3</a>
           </div>
       </div>
+       */}
       <div>
         {this.props.QuestionsAll.map((each, index) => {
           return(
@@ -22,6 +30,7 @@ class AnswersAndMore extends Component {
               <p className="question" >Problem {each.questionNumber}:</p>
               <details>
                 <summary className="answer" >question:{each.question}</summary>
+                {this.getImage(index + 1)}
                 <p className="background" >answer:{each.answer}</p>
               </details>
             </div>

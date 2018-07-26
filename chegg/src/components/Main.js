@@ -16,7 +16,8 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <img className="pic1" src={require('./Screen Shot 2018-07-21 at 8.26.20 PM.png')} alt="starting" />
+        <img className="pic1" src={require('./QuestionTop.png')} alt="starting" />
+        <img className="pic3" src={require('./Review.png')} />
         <QuestionsDisplay QuestionsMain={this.state.QuestionsMain} />
         <NavLink to='/AnswersAndMore'>
           <input className="button" type="submit" value="Answers and More" />
